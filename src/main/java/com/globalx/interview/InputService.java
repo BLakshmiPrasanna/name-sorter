@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class InputService {
 
-    public ArrayList<String> readFileToList(String inputFilePath) {
+    public ArrayList<String> readFileToList(String inputFilePath) throws IOException {
         ArrayList<String> list = new ArrayList<String>();
 
         try {
@@ -20,13 +20,10 @@ public class InputService {
             }
             reader.close();
         }
-        catch (FileNotFoundException e) {
-            System.out.println("FILE NOT FOUND Please enter correct file path");
-        } catch (IOException e) {
-
-            e.printStackTrace();
+        catch (IOException e) {
+            System.out.println("Error reading from file" + inputFilePath + ": " + e.getMessage());
+            throw e;
         }
         return list;
-
     }
 }
