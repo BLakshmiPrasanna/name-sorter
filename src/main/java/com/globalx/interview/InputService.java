@@ -8,12 +8,12 @@ import java.util.ArrayList;
 public class InputService {
 
     public String validateArguments(String[] args)  {
-        String inputFilePath ="";
-        if (args[0].length()==1){
+        String inputFilePath = "";
+        if (args.length == 1){
             inputFilePath = args[0];
         }
         else {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Invalid arguments passed. Only one filename is accepted as argument");
         }
         return inputFilePath;
     }
