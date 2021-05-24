@@ -1,12 +1,22 @@
 package com.globalx.interview;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class InputService {
+
+    public String validateArguments(String[] args)  {
+        String inputFilePath ="";
+        if (args[0].length()==1){
+            inputFilePath = args[0];
+        }
+        else {
+            throw new IllegalArgumentException();
+        }
+        return inputFilePath;
+    }
 
     public ArrayList<String> readFileToList(String inputFilePath) throws IOException {
         ArrayList<String> list = new ArrayList<String>();

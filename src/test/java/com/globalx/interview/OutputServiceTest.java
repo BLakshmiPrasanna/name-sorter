@@ -25,7 +25,7 @@ public class OutputServiceTest {
             "Shelby Nathan Yoder");
     OutputService outputService = new OutputService();
     String currentDir = System.getProperty("user.dir");
-    File outputFile = new File(currentDir, "sorted-names.txt");
+    File outputFile = new File(currentDir, "sorted-names-list.txt");
 
     @Test
     public void writeOutputToListTest() throws IOException {

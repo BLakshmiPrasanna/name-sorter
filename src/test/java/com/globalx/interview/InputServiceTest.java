@@ -21,7 +21,7 @@ public class InputServiceTest {
             "Leo Gardner",
             "Hunter Uriah Mathew Clarke",
             "Mikayla Lopez",
-            "Frankie Conner Ritte");
+            "Frankie Conner Ritter");
     String path = "src/test/resources/unsorted-names-list.txt";
     InputService inputService = new InputService();
     @Test

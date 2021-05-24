@@ -7,10 +7,9 @@ import java.util.List;
 
 public class NamesSorter {
 
-   public void sort (List<String>  unsortedList){
+   public void sortWithLastName (List<String>  unsortedList){
 
-       Collections.sort(unsortedList, new LastNameComparator());
-
+       Collections.sort(unsortedList, new NameComparator());
 
    }
 
